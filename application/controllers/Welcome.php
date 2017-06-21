@@ -20,6 +20,31 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		/*
+		$this->db->query("UPDATE cod_committee SET code = 'DROI' WHERE id_committee = 2");
+		echo 'Row Updated';
+
+		$listCommittees = $this->db->query('SELECT * FROM cod_committee');
+
+		foreach ($listCommittees->result() as $row)
+		{
+		        echo $row->code;
+		        echo ' - ';
+		        echo $row->name;
+		        echo '<br>';
+		}
+
+		echo 'Total Results: ' . $listCommittees->num_rows();
+
+		echo '<pre>';
+		print_r($listCommittees);
+		die('FINISHED');
+		*/
+		$listCommittees = $this->db->query('SELECT * FROM cod_committee')->result();
+
+		$data['listCommittees'] = $listCommittees;
+		//$data['test'] = 'Thois is  atest';
+
+		$this->load->view('welcome_message', $data);
 	}
 }

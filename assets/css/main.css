@@ -1,0 +1,99 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 70px;
+}
+
+.container {
+    width: 90%;
+}
+
+
+.center-y{
+	vertical-align:middle;
+}
+
+.form-control {
+	color: black !important;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #f5f5f5;
+}
+
+
+.modal-lg {
+    width: 70%;
+}
+
+.modal-header {
+	border-radius: 6px 6px 6px 6px !important;
+}
+
+.modal-content {
+	border-radius: 6px 6px 6px 6px !important;
+}
+
+.panel-header {
+	border-radius: 6px 6px 0px 0px;
+}
+
+.modal-header.active{
+	background-color: #f5f5f5;
+}
+
+.modal-header.success{
+	background-color: #dff0d8;
+}
+  
+.modal-header.warning{
+	background-color: #fcf8e3;
+}
+
+.modal-header.danger{
+	background-color: #f2dede;
+}
+
+.modal-header.info{
+	background-color: #d9edf7;
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.cke_bottom {
+	height: 1px !important;
+	padding-bottom: 0px !important;
+	/* display: none !important; */
+}
+
+
