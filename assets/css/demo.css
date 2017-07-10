@@ -15,11 +15,11 @@ body {
 
 
 .center-y{
-    vertical-align:middle;
+	vertical-align:middle;
 }
 
 .form-control {
-    color: black !important;
+	color: black !important;
 }
 
 #footer {
@@ -37,35 +37,35 @@ body {
 }
 
 .modal-header {
-    border-radius: 6px 6px 6px 6px !important;
+	border-radius: 6px 6px 6px 6px !important;
 }
 
 .modal-content {
-    border-radius: 6px 6px 6px 6px !important;
+	border-radius: 6px 6px 6px 6px !important;
 }
 
 .panel-header {
-    border-radius: 6px 6px 0px 0px;
+	border-radius: 6px 6px 0px 0px;
 }
 
 .modal-header.active{
-    background-color: #f5f5f5;
+	background-color: #f5f5f5;
 }
 
 .modal-header.success{
-    background-color: #dff0d8;
+	background-color: #dff0d8;
 }
   
 .modal-header.warning{
-    background-color: #fcf8e3;
+	background-color: #fcf8e3;
 }
 
 .modal-header.danger{
-    background-color: #f2dede;
+	background-color: #f2dede;
 }
 
 .modal-header.info{
-    background-color: #d9edf7;
+	background-color: #d9edf7;
 }
 
 
@@ -91,9 +91,9 @@ code {
 }
 
 .cke_bottom {
-    height: 1px !important;
-    padding-bottom: 0px !important;
-    /* display: none !important; */
+	height: 1px !important;
+	padding-bottom: 0px !important;
+	/* display: none !important; */
 }
 
 /* Panel */
@@ -108,23 +108,23 @@ code {
 }
 
 .panel-body h3.custom {
-    border-bottom: 1px solid #A1A1A1;
+	border-bottom: 1px solid #A1A1A1;
 }
 
 /*    margin-top: 10px;
     display:inline-block;
-    position:relative; 
-    bottom: 10px;
+	position:relative; 
+	bottom: 10px;
 */
 
 .help {
-    font-size: 17px;
-    margin-left: 0px;
+	font-size: 17px;
+	margin-left: 0px;
 }
 
 /*.help + .glyphicon {*/
 .help.glyphicon {
-    top: -3px;
+	top: -3px;
 }
 
 .popover {
@@ -133,9 +133,9 @@ code {
 
 
 .popover-title {
-    background-color: rgb(217, 237, 247);
-    border-color: rgb(188, 232, 241);
-    color: rgb(49, 112, 143);
+	background-color: rgb(217, 237, 247);
+	border-color: rgb(188, 232, 241);
+	color: rgb(49, 112, 143);
 }
 
 
@@ -149,35 +149,35 @@ code {
 }
 
 .paneldiff {
-    color:black !important; 
-    padding: 10px;
+	color:black !important; 
+	padding: 10px;
 }
 
 h4.custom {
-    margin-left: 20px; 
-    margin-bottom: -20px;
+	margin-left: 20px; 
+	margin-bottom: -20px;
 }
 
 h4.custom + div.panel-default{
-    margin: 20px
+	margin: 20px
 }
 
 .panel-custom {
-    background-color: rgb(236, 235, 232); /* #D4D0C8 #E9E4DC */
+	background-color: rgb(236, 235, 232); /* #D4D0C8 #E9E4DC */
 }
 
 .panel-custom2 {
-    border-color: rgb(156, 133, 98) !important;
+	border-color: rgb(156, 133, 98) !important;
 }
 
 
 .panel-heading-custom {
-    background-color:#9C8562;
+	background-color:#9C8562;
 }
 
 
 .panel-heading-custom {
-    background-color: rgb(196,182,160);
+	background-color: rgb(196,182,160);
     background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%);
     background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%) !important;
     background-image: linear-gradient(to bottom, rgb(185,170,145) 0%, rgb(196,182,160) 100%) !important;
@@ -186,22 +186,22 @@ h4.custom + div.panel-default{
 }
 
 .paneldiffoutput {
-    color:black !important; 
-    padding: 10px;
+	color:black !important; 
+	padding: 10px;
 }
 
 .panel-body-custom {
-    padding-bottom:15px; 
-    background-color: rgb(233, 228, 220);
-    /*rgba(255, 255, 255, 0.55) rgb(247, 250, 253) rgb(254, 253, 249) #fbfbfb #F6F6F6 #E9E9E9*/
+	padding-bottom:15px; 
+	background-color: rgb(233, 228, 220);
+	/*rgba(255, 255, 255, 0.55) rgb(247, 250, 253) rgb(254, 253, 249) #fbfbfb #F6F6F6 #E9E9E9*/
 }
 
 .nomargin {
-    margin: 0px;
+	margin: 0px;
 }
 
 .btn-custom {
-    cursor: default;
+	cursor: default;
 }
 
 hr.custom {
@@ -209,12 +209,12 @@ hr.custom {
     color: #d1cdc6;
     background: #d1cdc6;
     color: #8b8884;
-    background: #8b8884;    
-    
+    background: #8b8884;	
+	
     font-size: 0;
     border: 0;
-    margin-left: -12px;
-    margin-right: -12px;
+	margin-left: -12px;
+	margin-right: -12px;
 }
 
 
@@ -266,7 +266,7 @@ hr.custom {
     background-color: rgb(252, 248, 242);
     border-color: rgb(240, 173, 78);
     margin: 10px 0px;
-    padding: 5px;
+	padding: 5px;
     padding-left: 10px;
     padding-top: 10px;
 }
@@ -283,7 +283,7 @@ hr.custom {
 
 .bs-callout-info h4 {
     color: rgb(91, 192, 222);
-    color: #31708f;
+	color: #31708f;
 }
 .bs-callout h4 {
     margin-top: 0px;
@@ -292,7 +292,7 @@ hr.custom {
 
 .bs-callout-info h3 {
     color: rgb(91, 192, 222);
-    color: #31708f;
+	color: #31708f;
 }
 .bs-callout h3 {
     margin-top: 0px;
@@ -304,7 +304,7 @@ hr.custom {
     /*background-color: rgb(252, 248, 242);
     border-color: rgb(240, 173, 78);
     margin: 10px 0px;
-    padding: 5px;
+	padding: 5px;
     padding-left: 10px;
     padding-top: 10px;*/
 }
@@ -322,30 +322,30 @@ hr.custom {
 
 .bs-callout-danger h4, .bs-callout-danger h3,
 .bs-callout-danger a.alert-link {
-    color: #B94A48;
+	color: #B94A48;
 }
 
 .highlight {
-    background-color: yellow;
+	background-color: yellow;
 }
 
 .dataTables_length label {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .dataTables_length select {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .dataTables_length button.selectpicker {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 .dataTables_filter input {
-    margin-left: 0em !important;
-    margin-right: 10em;
+	margin-left: 0em !important;
+	margin-right: 10em;
     height: 40px;
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .dataTables_wrapper .dataTables_filter input {
@@ -357,12 +357,12 @@ hr.custom {
 }
 
 #table_demo, #table_demo_admin {
-    border-top: 1px solid black;
+	border-top: 1px solid black;
 }
 
 /*#div {
-    color: red\9;
-    height: 300px\9;
+	color: red\9;
+	height: 300px\9;
 }*/
 
 .navbar-custom {
@@ -488,7 +488,7 @@ hr.custom {
     background-color: rgba(86, 61, 124, 0.15);
     background-color: rgba(86, 61, 124, 0.05);
     background-color: rgba(167, 199, 215, 0.2);
-    
+	
     border: 1px solid rgba(86, 61, 124, 0.15);
     border: 1px solid rgba(244, 248, 250, 0.5);
     border: 1px solid rgba(167, 199, 215, 0.5);
@@ -504,7 +504,7 @@ padding-bottom: 0px;
 }
 
 tr.customselected {
-    color: green !important;
+	color: green !important;
 }
 
 
