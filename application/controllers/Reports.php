@@ -20,9 +20,10 @@ class Reports extends CI_Controller {
 	 */
 	public function index()
 	{
-		$reports = $this->db->query('SELECT * FROM cod_report')->result();
+		$reports = $this->db->query('SELECT * FROM cod_report')->result('array');
 
 		$data['reports'] = $reports;
+		$data['contextClass'] = 'info';
 
 		$this->load->view('reports', $data);
 	}
