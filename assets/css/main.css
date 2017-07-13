@@ -495,8 +495,8 @@ hr.custom {
 }
 
 .customcol2 {
-padding-top: 15px;
-padding-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 0px;
 }
 
 .containercustom {
@@ -507,5 +507,11 @@ tr.customselected {
     color: green !important;
 }
 
+.main-container {
+    padding-bottom: 30px;
+}
 
+.main-container2 {
+    padding-bottom: 30px;
+}
 

@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <!-- Begin page content -->
-    <div class="container" style="padding-bottom: 30px">
+    <div class="main-container container">
         <div class="bs-callout bs-callout-warning">
             <p>Tool for the File Coordinators to <strong>assemble and report</strong> all relevant information about the <strong>COD files</strong>.</p>
         </div>
