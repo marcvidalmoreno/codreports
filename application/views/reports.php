@@ -1,316 +1,172 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>  
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="Marc Vidal Moreno">
 
-      <title>Cod Files Reporting Tool</title>
-      <!-- <title>All COD Reports</title> -->
+        <link rel="shortcut icon" href="<?php echo base_url("assets/ico/favicon.ico"); ?>">
 
-      <!-- Bootstrap core CSS -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
-      <!-- Bootstrap theme -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-theme.min.css"); ?>" />
-      <!-- Custom styles for this template -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-theme.css"); ?>" />
-      <!-- Bootstrap DatePicker -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-datetimepicker.css"); ?>" />
-      <!-- Main Stylesheet -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css"); ?>" />
-    
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+        <title>Cod Files Reporting Tool</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
+        <!--<link rel="stylesheet" href="<?php //echo base_url("assets/css/bootstrap.min.css"); ?>" />-->
+        
+        <!-- Bootstrap theme -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-theme.css"); ?>" />
+        <!-- <link rel="stylesheet" href="<?php //echo base_url("assets/css/bootstrap-theme.min.css"); ?>" /> -->
+        
+        <!-- Bootstrap DatePicker -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-datetimepicker.css"); ?>" />
+
+        <!-- Bootstrap Select -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-select.css"); ?>" />
+
+        <!-- Bootstrap Checkbox -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap-checkbox.css"); ?>" />
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/font-awesome.min.css"); ?>" />
+        
+        <!-- Awesome Bootstrap Checkbox -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/awesome-bootstrap-checkbox.css"); ?>" />
+        
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css"); ?>" />
+        
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/jquery.dataTables.css"); ?>" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
-    <body>
-        <h1>Welcome to Cod Files Reporting Tool! 234</h1>
-        <pre>
-          <?php print_r($reports); ?>
-        </pre>
 
-        <div id="footer">
-          <div class="container">
-            <p class="text-muted text-center">
-              <img src="../../IMAGES/DLA.png">
-              European Parliament | Directorate-General for the Presidency | Directorate for Legislative Acts
-            </p>
-          </div>
+    <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">COD Reports</a>
+            </div>
+            
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="demo.asp">All Files</a></li>
+                    <li><a href="myfiles.asp">My Files</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Help</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div><!--/.nav-collapse -->
         </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container" style="padding-bottom: 30px">
+        <div class="bs-callout bs-callout-warning">
+            <p>Tool for the File Coordinators to <strong>assemble and report</strong> all relevant information about the <strong>COD files</strong>.</p>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div id="footer">
+        <div class="container">
+        <p class="text-muted text-center">
+          <!--<img src="../../IMAGES/DLA.png">-->
+          European Parliament | Directorate-General for the Presidency | Directorate for Legislative Acts
+        </p>
+        </div>
+    </div>
 
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!--  Placed at the end of the document so the pages load faster  -->
+    <!--  Jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    <script src="<?php echo base_url("assets/js/jquery-2.1.0.js"); ?>"></script>
+    <!-- JS Bootstrap -->
     <script src="<?php echo base_url("assets/js/bootstrap.js"); ?>"></script>
-    <script src="<?php echo base_url("assets/js/moment.min.js"); ?>"></script>
-    <script src="<?php echo base_url("assets/js/bootstrap-datetimepicker.js"); ?>"></script>
-  
-    <!-- CKEditor - Rich Text Editor -->
-    <script src="<?php echo base_url("assets/ckeditor/ckeditor.js"); ?>"></script>
-    
-    <!-- Date Time Picker -->
-    <script src="<?php echo base_url("assets/js/bootstrap-datetimepicker.js"); ?>"></script>
+    <!-- <script src="<?php //echo base_url("assets/js/bootstrap.min.js"); ?>"></script> -->
 
-    <!--  Autosize Jquery Library -->
-    <script src="<?php echo base_url("assets/autosize/jquery.autosize.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/moment.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/bootstrap-datetimepicker.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/bootstrap-select.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/bootstrap-checkbox.js"); ?>"></script>
     
-    <!--  Placeholder Jquery Library -->
+    <!-- CKEditor - Rich Text Editor -->
+
+    <!--<script src="ckeditor/ckeditor.js"></script>-->
+    <!-- TODO: Move file to assets/js folder -->
+    <script src="<?php echo base_url("assets/ckeditor/ckeditor.js"); ?>"></script>
+
+    <!--<script src="autosize/jquery.autosize.min.js"></script>-->
+    <!-- TODO: Move file to assets/js folder -->
+    <script src="<?php echo base_url("assets/autosize/jquery.autosize.min.js"); ?>"></script>
+
+    
     <script src="<?php echo base_url("assets/js/jquery.placeholder.js"); ?>"></script>
     
-
-
-
-
-    <script>
+    <!-- TODO: Confirm - See which one is used -->
+    <script src="<?php echo base_url("assets/js/confirm.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/js/jquery.confirm.js"); ?>"></script>
+    
+    <script src="<?php echo base_url("assets/js/underscore.min.js"); ?>"></script>
+    
+    <script src="<?php echo base_url("assets/js/jquery.highlight-4.js"); ?>"></script>
   
-  // $(document).ready(function(){
-  //    $('textarea').autosize();   
-  //});
-  
-  //<div class="fieldwrapper" id="field1">
-  //  <input class="fieldname" type="text"><input class="remove" value="-" type="button">
-  //</div>
-  
-  /*
-    <div class="fieldwrapper" id="field1">
-      <input class="fieldname" type="text">
-      <input class="remove" value="-" type="button">
-    </div>  
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
     
-    <div class="fieldwrapper" id="field2">
-      <input class="fieldname" type="text">
-      <input class="remove" value="-" type="button">
-    </div>
-    
-    
-    
-    
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md-2">
-        <label for="dateofthetrilogue">Date of the trilogue:</label>
-         <div class="input-group date" id="datetimepicker123" data-date-format="YYYY/MM/DD"> 
-          <input type='text' class="form-control" placeholder="Enter the date..."  id="show123" />
-           <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-          </span> 
-        </div> 
-        </div>
-        <div class="col-md-9">
-        <label for="notesaboutthetrilogue">Notes about the trilogue:</label>
-        <textarea class="form-control autosize" id="" name="">The consolidated text was received from translation and finalisation is well under way.</textarea>
-        </div>
-        <div style="" class="col-md-1">           
-        <button type="button" class="btn btn-primary btn-md pull-right" style="margin-top:25px">Delete</button>
-        </div>
-      </div>
-    </div>
-      
-      
-  */
-  
-  
-  $(document).ready(function() {
-  
-    $("#add").click(function() {
-      var intId = $("#buildyourform div.row").length + 1;
-      alert(intId);
-      //var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\"/>");
-      //var fieldWrapper = $('<div class="fieldwrapper" id="field'+ intId +'>');
-      
-      //var fName = $("<input type=\"text\" class=\"fieldname\" />");
-      //var fName = $('<input class="fieldname" type="text">');
-       
-      var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
-      //var removeButton = $('<input class="remove" value="-" type="button">');
-      
-      var row = '<div class="form-group"><div class="row"><div class="col-md-2"><label for="dateofthetrilogue">Date of the trilogue:</label><div class="input-group date" class="datetimepickaa" id="datetimepickerloop'+ intId +'" data-date-format="YYYY/MM/DD"><input type="text" class="form-control" placeholder="Enter the date..."  class="datetimepickaa" /><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div></div><div class="col-md-9"><label for="notesaboutthetrilogue">Notes about the trilogue:</label><textarea class="form-control autosize" id="" name="">The consolidated text was received from translation and finalisation is well under way.</textarea></div><div style="" class="col-md-1"><button type="button" class="btn btn-primary btn-md pull-right" style="margin-top:25px">Delete</button></div></div></div>'
-    
-    
-    
-    
-      removeButton.click(function() {
-        $(this).parent().remove();
-      });
-      //fieldWrapper.append(fName);
-      //fieldWrapper.append(removeButton);
-      //fieldWrapper.append(row);
-      $("#buildyourform").append(row);
-      
-      $('.autosize').autosize();
-      
-    
-      $('#datetimepickerloop1').datetimepicker({
-        pickTime: false
-        //orientation: "auto left"
-      });
-      $('#datetimepickerloop2').datetimepicker({
-        pickTime: false
-        //orientation: "auto left"
-      });
-      $('#datetimepickerloop3').datetimepicker({
-        pickTime: false
-        //orientation: "auto left"
-      });
-      $('#datetimepickerloop4').datetimepicker({
-        pickTime: false
-        //orientation: "auto left"
-      });
-    });
+    <script src="<?php echo base_url("assets/js/jquery.dataTables.columnFilter.js"); ?>"></script>
 
+    <!-- Javascript Library to get the differences from to texts -->
+    <script type="text/javascript" src="<?php echo base_url("assets/js/diff-match-patch.js"); ?>"></script>
 
+    <!-- Custom JS file -->
+    <script src="<?php echo base_url("assets/js/main.js"); ?>"></script>
 
-    //GOOD
-    $("#add324243").click(function() {
-      var intId = $("#buildyourform div.fieldwrapper").length + 1;
-      alert(intId);
-      var fieldWrapper = $("<div class=\"fieldwrapper\" id=\"field" + intId + "\" />");
-      //var fieldWrapper = $('<div class="fieldwrapper" id="field'+ intId +'>');
-      
-      var fName = $("<input type=\"text\" class=\"fieldname\" />");
-      //var fName = $('<input class="fieldname" type="text">');
-       
-      var removeButton = $("<input type=\"button\" class=\"remove\" value=\"-\" />");
-      //var removeButton = $('<input class="remove" value="-" type="button">');
-      
-      removeButton.click(function() {
-        $(this).parent().remove();
-      });
-      fieldWrapper.append(fName);
-      fieldWrapper.append(removeButton);
-      $("#buildyourform").append(fieldWrapper);
-    });
-  
-    $('input, textarea').placeholder();
-    $('#datetimepicker343').datetimepicker();
-    //$('#datetimepicker123').datetimepicker();
-    
-    $('#datetimepicker123').datetimepicker({
-      pickTime: false
-      //orientation: "auto left"
-    });
-
-    
-    
-    
-    $("#show123").click(function () {
-      $('#datetimepicker123').data("DateTimePicker").show();
-    });
-    
-    
-    
-    $('.datetimepickaa').datetimepicker({
-      pickTime: false
-      //orientation: "auto left"
-    });
-    
-    $(".datetimepickaa").click(function () {
-      $('.datetimepickaa').data("DateTimePicker").show();
-    });
-
-    //$('#datetimepicker1').datetimepicker();
-    
-    //$('input.deitpicka').datepicker({   });
-    
-    /*$('#dp1').datepicker({
-      format: 'mm-dd-yyyy'
-    });*/   
-
-    CKEDITOR.replace( 'editor1', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    CKEDITOR.replace( 'editor2', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    CKEDITOR.replace( 'editor3', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    CKEDITOR.replace( 'editor4', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    CKEDITOR.replace( 'editor5', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    CKEDITOR.replace( 'editor6', {
-      extraPlugins: 'autogrow',
-      removePlugins: 'resize'
-    });
-    
-    //CKEDITOR.replace( 'editor7', {
-      //extraPlugins: 'autogrow',
-      //removePlugins: 'resize'
-    //});
-
-    $('.autosize').autosize();
-  });
-  
-    </script>
-
-    <!-- <script src="../../assets/js/docs.min.js"></script> -->
-  
-<div class="container">
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='sadatetimepicker1' class="deipickaars">
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='sadatetimepicker1' class="deipickaars">
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='sadatetimepicker1' class="deipickaars">
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <script type="text/javascript">
-            $(function () {
-                $('.deipickaars').datetimepicker();
-            });
-        </script> 
-  
   </body>
 </html>
