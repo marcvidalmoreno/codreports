@@ -104,7 +104,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <!-- Content -->
-
         <div class="bs-callout bs-callout-info">
             <!-- <a class="close" data-dismiss="bs-callout">×</a> -->
             <h3><span class="glyphicon glyphicon-align-justify"></span> ALL COD Files</h3>
@@ -170,61 +169,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>EP</td>
                         -->
                         <td style="vertical-align:middle" class="center-y">
-
+                        
                             <!-- Button trigger modal -->
                             <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#myModal<?php echo $i ?>"><span class="glyphicon glyphicon-eye-open"></span> Validated Version</button> <!-- Details -->
-                            
-                            <!-- Modal -->
-                            <div class="modal fade bs-example-modal-lg" id="myModal<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <!-- <div class="modal-content panel panel-<% response.Write(context_class) %>"> -->
-
-                                    <div class="modal-content panel panel-info"> <!-- default primary -->
-
-                                        <div class="modal-header panel-heading"> 
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <!--<h3 class="modal-title" id="myModalLabel"><strong>Resolution - <%=rs("nametypedoc") %> - <%=rs("codnr") %></strong></h3>--> <!-- Is it necessary to find out type of doc? -->
-                                            <h3 class="modal-title" id="myModalLabel"><strong>Resolution - Type of Document - <?php echo $report['id_cod_report'] ?></strong></h3>
-                                            
-                                            <!--<h3 class="modal-title"><%=rs("shorttitle") %></h3>-->
-                                            <h3 class="modal-title"><td><?php echo $report['title'] ?></td></h3> <!-- Do I need also a short title? -->
-                                            
-                                            <h4 class="modal-title">File coordinator: <strong>Vidal Moreno, Marc</strong>
-                                            <a style="margin-left: 10px" href="#" class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-eye-open"></span> See Profile</a></h4>
-                                            
-                                            <h4 class="modal-title">Committee: <strong><td><?php echo $report['id_committee'] ?></td></strong></h4>
-
-                                            <h4 class="modal-title">Rapporteur: <strong>Rapporteur</strong></h4>
-
-                                            <h4 class="modal-title">Stage reached: <strong>Stage reached</strong></h4>
-
-                                            <h4 class="modal-title">Latest Validation: <strong>08/08/2017</strong></h4>
-                                            
-                                            <!--<div class="modal-header panel-heading"> 
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h3 class="modal-title" id="myModalLabel">Details - <%=rs("codnr") %></h3>
-                                            <h3 class="panel-title">Panel title</h3> -->
-                                        </div>
-                          
-                                        <div class="modal-body panel-body">
-                                            <!-- <h4><strong>Legislation - Resolution - <%=rs("shorttitle") %></strong></h4> -->
-                                            <hr/>                  
-
-                                            <p><strong>Content:</strong>"commentcontentDLA"</p>
-                                            <p><strong>Procedure in committee:</strong>"commentProcCom"</p>
-                                            <p><strong>Plenary envisaged:</strong>"CommentIDSession"</p>
-                                            <p><strong>Negotiations:</strong>"CommentNegociations"</p>
-                                            <p><strong>Procedural issues: (if any)</strong>"CommentProcIssues"</p>
-                                            <p><strong>Finalisation:</strong>"CommentFinal"</p>
-                                        </div>
-                          
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </td>
               
                         <td style="vertical-align:middle">

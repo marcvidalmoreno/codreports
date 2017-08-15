@@ -9,4 +9,48 @@ $(document).ready(function() {
             $(this).addClass('active');
         }
     });
+
+    // Options for the table in the demo part
+    $('#table_demo').dataTable( {
+        "order": [[ 0, "asc" ]],
+        /*"aoColumnDefs": [
+          { "bSearchable": false, "aTargets": [ 10 ] }
+        ],*/
+        "aoColumns": [ // IMPORTANT!!! Which columns are sortable.. Remember to add a row here if you add new column in HTML
+            null,
+            null,
+            null,
+            null,
+            { "bSortable": false },
+            { "bSortable": false }
+        ],
+        //"iDisplayLength": "5",
+        "oLanguage": {
+            //"sSearch": "Filter COD Files:",
+            "sSearch": "",
+            "sInfo": "Showing _START_ to _END_ of _TOTAL_ COD Files",
+            "sInfoEmpty": "No COD Files to show",
+            "sInfoFiltered": " - filtering from _MAX_ COD Files",
+            "sZeroRecords": "No COD Files to display",
+            "sLengthMenu": 'Display <select>'+
+            '<option value="10">10</option>'+
+            '<option value="20">20</option>'+
+            '<option value="30">30</option>'+
+            '<option value="40">40</option>'+
+            '<option value="-1">All</option>'+
+            '</select> COD Files'
+            /*"sLengthMenu": 'Display <select>'+
+            '<option value="5">5</option>'+
+            '<option value="10">10</option>'+
+            '<option value="15">15</option>'+
+            '<option value="20">20</option>'+
+            '<option value="25">25</option>'+
+            '<option value="30">30</option>'+
+            '<option value="-1">All</option>'+
+            '</select> COD Files'*/          
+        }
+    });
+
+    // Styling and customizing the datatables elements
+    $(".dataTables_filter input").attr("placeholder", "Enter text to filter").addClass("form-control placeholder");
 });
