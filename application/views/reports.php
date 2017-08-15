@@ -71,7 +71,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav navbar-nav">
                     <li style="width:100px">&nbsp;</li>
 
-
                     <li class="<?php echo active_link('reports', 'index'); ?>">
                         <a href="<?php echo site_url('reports/index'); ?>">All files</a>
                     </li>
@@ -85,14 +84,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </li>
                 </ul>
               
-              <form class="navbar-form navbar-right" role="search" action="search.php"?>           
+                <form class="navbar-form navbar-right" role="search" action="search.php"?>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter the text to..." name="text">
                     </div>
                     <button type="submit" class="btn btn-md btn-custom-hover">
                         <span class="glyphicon glyphicon-search"></span> Search
                     </button>
-              </form>
+                </form>
+
             </div>
         </div>
     </div><!--/.navbar -->
@@ -104,10 +104,146 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <!-- Content -->
-        <pre>
-        <?php print_r($reports) ?>
+
+        <div class="bs-callout bs-callout-info">
+            <!-- <a class="close" data-dismiss="bs-callout">×</a> -->
+            <h3><span class="glyphicon glyphicon-align-justify"></span> ALL COD Files</h3>
+            <p>This is a list of <strong>ALL Reports</strong>. Select one of your files to View its Details or to Edit it.</p>
+        </div>
+
+        <!-- IMPORTANT!!! Remember to add a row in the options of the datatables plugin in the footer $('#table_demo').dataTable( {      if you add a new column to the table -->
+        <div class="bs-example">
+            <table id="table_demo" class="display">
+            <!--<table id="table_id" class="table display table-hover">-->
+                <thead>
+                    <tr>
+                        <th>id_cod_report</th>
+                        <th>id_committee</th>
+                        <th>id_session</th>
+                        <th>title</th>
+
+                        <th>View</th>
+                        <th>Update Comment</th>
+                        <!--
+                        <th>Session</th>
+                        <th>COD ID</th>
+                        <th>Title</th>
+                        <th>Committee</th>
+                        <th>Rapporteur</th>
+                        <th>Stage reached</th>
+                        <th>Proc. descr.</th> 
+                        <th>Last update</th>
+                        <th>F. Coordinator</th>
+                        <th>Chef de file</th>
+                        <th>View</th>
+                        <th>Edit</th>
+                        -->
+                    </tr>
+                </thead>
+                <tbody>
+                <?php $contextClass = "info" ?>
+                <?php //$contextClass = "success" ?>
+                <?php //$contextClass = "danger" ?>
+                <?php //$contextClass = "warning" ?>
+                <?php foreach ($reports as $i => $report) { ?>
+                    <tr class="<?php //echo $contextClass ?>"> <!-- Context class seems to not be used in this page -->
+                        <td><?php echo $report['id_cod_report'] ?></td>
+                        <td><?php echo $report['id_committee'] ?></td>
+                        <td><?php echo $report['id_session'] ?></td>
+                        <td><?php echo $report['title'] ?></td>
 
 
+
+
+
+
+                        <!--<td><%=rs("namesession") %></td>--> <!-- Session -->
+                        <!--<td><%=rs("codnr") %></td>--> <!-- COD Number -->
+                        <!--<td><%=rs("shorttitle") %></td>--> <!-- Title -->
+                        <!--<td><%=rs("abbr") %></td>--> <!-- committee -->
+                        <!--<td><%=rs("mepenamn") %></td>--> <!-- Rapporteur -->
+                        <!--<td><%=rs("namestagereached") %></td>--> <!-- STage Reached -->
+                        <!--<td><%=rs("procdescr") %></td>--> <!-- Proc Descr -->
+                         <!--
+                         <td><%=Left(rs("dateValidationDLA"),10)  &" at "&Mid(rs("DateValidationDLA"),12,5) %></td>
+                        <td> <a href=/ADMIN/STAFF/staff_details.asp?detail=<%=rs("idfc")%>><%=rs("enamn") & ", " &rs("fnamn") %></a></td>
+                        <td>EP</td>
+                        -->
+                        <td style="vertical-align:middle" class="center-y">
+
+                            <!-- Button trigger modal -->
+                            <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#myModal<?php echo $i ?>"><span class="glyphicon glyphicon-eye-open"></span> Validated Version</button> <!-- Details -->
+                            
+                            <!-- Modal -->
+                            <div class="modal fade bs-example-modal-lg" id="myModal<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <!-- <div class="modal-content panel panel-<% response.Write(context_class) %>"> -->
+
+                                    <div class="modal-content panel panel-info"> <!-- default primary -->
+
+                                        <div class="modal-header panel-heading"> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <!--<h3 class="modal-title" id="myModalLabel"><strong>Resolution - <%=rs("nametypedoc") %> - <%=rs("codnr") %></strong></h3>--> <!-- Is it necessary to find out type of doc? -->
+                                            <h3 class="modal-title" id="myModalLabel"><strong>Resolution - Type of Document - <?php echo $report['id_cod_report'] ?></strong></h3>
+                                            
+                                            <!--<h3 class="modal-title"><%=rs("shorttitle") %></h3>-->
+                                            <h3 class="modal-title"><td><?php echo $report['title'] ?></td></h3> <!-- Do I need also a short title? -->
+                                            
+                                            <h4 class="modal-title">File coordinator: <strong>Vidal Moreno, Marc</strong>
+                                            <a style="margin-left: 10px" href="#" class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-eye-open"></span> See Profile</a></h4>
+                                            
+                                            <h4 class="modal-title">Committee: <strong><td><?php echo $report['id_committee'] ?></td></strong></h4>
+
+                                            <h4 class="modal-title">Rapporteur: <strong>Rapporteur</strong></h4>
+
+                                            <h4 class="modal-title">Stage reached: <strong>Stage reached</strong></h4>
+
+                                            <h4 class="modal-title">Latest Validation: <strong>08/08/2017</strong></h4>
+                                            
+                                            <!--<div class="modal-header panel-heading"> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h3 class="modal-title" id="myModalLabel">Details - <%=rs("codnr") %></h3>
+                                            <h3 class="panel-title">Panel title</h3> -->
+                                        </div>
+                          
+                                        <div class="modal-body panel-body">
+                                            <!-- <h4><strong>Legislation - Resolution - <%=rs("shorttitle") %></strong></h4> -->
+                                            <hr/>                  
+
+                                            <p><strong>Content:</strong>"commentcontentDLA"</p>
+                                            <p><strong>Procedure in committee:</strong>"commentProcCom"</p>
+                                            <p><strong>Plenary envisaged:</strong>"CommentIDSession"</p>
+                                            <p><strong>Negotiations:</strong>"CommentNegociations"</p>
+                                            <p><strong>Procedural issues: (if any)</strong>"CommentProcIssues"</p>
+                                            <p><strong>Finalisation:</strong>"CommentFinal"</p>
+                                        </div>
+                          
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+              
+                        <td style="vertical-align:middle">
+                            <?php //if in_array(rs("IDCodTableData"), arrCodnumbersByCommittee) Or username = rs("Useridx") { ?>
+                                <!--Response.Write rs("IDCodTableData") & " is in the array" & rs("Useridx")-->
+                                <a class="btn btn-sm btn-primary" href="edit.php"><span class="glyphicon glyphicon-pencil"></span> Updated Version</a>
+                                <!--?idprocedure=<?php //echo $report['id_cod_report'] ?>&idcodtabledata=<?php //echo $report['id_cod_report'] ?>&context=<?php //echo $contextClass ?>"><span class="glyphicon glyphicon-pencil"></span> Updated Version</a>-->
+                
+                            <?php //} else { ?>
+                                <!-- Response.Write rs("IDCodTableData") & " is not in the array" & rs("Useridx") -->
+                                <!-- If user doesn't have the right ot edit the file -->
+                                <!--<a class="btn btn-sm btn-primary disabled">&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-remove"></span> Not Editable&nbsp;&nbsp;&nbsp;</a>-->
+                            <?php //}  ?>              
+                        </td>
+                    </tr>
+                    <?php } ?><!-- /foreach -->
+                </tbody>
+            </table>
+        </div><!-- /.bs-example -->
     </div>
 
     <div id="footer">
