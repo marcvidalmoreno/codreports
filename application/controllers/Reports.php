@@ -18,13 +18,27 @@ class Reports extends CI_Controller {
 	 * map to /index.php/reports/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
+	public function index() {
 		$reports = $this->db->query('SELECT * FROM cod_report')->result('array');
 
 		$data['reports'] = $reports;
 		$data['contextClass'] = 'info';
 
+		$this->load->view('reports', $data);
+	}
+
+	public function myfiles() {
+		$reports = $this->db->query('SELECT * FROM cod_report')->result('array');
+		
+		$data['reports'] = $reports;
+		$this->load->view('reports', $data);
+	}
+
+	public function mycommittee() {
+		$myCommittee = 10;
+		$reports = $this->db->query("SELECT * FROM cod_report WHERE id_committee = $myCommittee")->result('array');
+		
+		$data['reports'] = $reports;
 		$this->load->view('reports', $data);
 	}
 }

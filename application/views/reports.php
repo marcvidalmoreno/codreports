@@ -53,10 +53,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <body>
 
+
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -64,39 +64,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">COD Reports</a>
+                <a class="navbar-brand" href="<?php echo base_url("index.php/codreports"); ?>">COD Reports</a>
             </div>
-            
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="demo.asp">All Files</a></li>
-                    <li><a href="myfiles.asp">My Files</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Help</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
+                    <li style="width:100px">&nbsp;</li>
+
+
+                    <li class="<?php echo active_link('reports', 'index'); ?>">
+                        <a href="<?php echo site_url('reports/index'); ?>">All files</a>
+                    </li>
+
+                    <li class="<?php echo active_link('reports', 'myfiles'); ?>">
+                        <a href="<?php echo site_url('reports/myfiles'); ?>">My files</a>
+                    </li>
+
+                    <li class="<?php echo active_link('reports', 'mycommittee'); ?>">
+                        <a href="<?php echo site_url("reports/mycommittee"); ?>">My Committee Files</a>
                     </li>
                 </ul>
               
-                <form class="navbar-form navbar-right" role="search">
+              <form class="navbar-form navbar-right" role="search" action="search.php"?>           
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Enter the text to..." name="text">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div><!--/.nav-collapse -->
+                    <button type="submit" class="btn btn-md btn-custom-hover">
+                        <span class="glyphicon glyphicon-search"></span> Search
+                    </button>
+              </form>
+            </div>
         </div>
-    </div>
+    </div><!--/.navbar -->
 
     <!-- Begin page content -->
     <div class="main-container container">
@@ -104,8 +103,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p>Tool for the File Coordinators to <strong>assemble and report</strong> all relevant information about the <strong>COD files</strong>.</p>
         </div>
 
-
-
+        <!-- Content -->
+        <pre>
+        <?php print_r($reports) ?>
 
 
     </div>
