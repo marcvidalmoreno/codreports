@@ -52,8 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </head>
 
     <body>
-
-
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -116,13 +114,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!--<table id="table_id" class="table display table-hover">-->
                 <thead>
                     <tr>
-                        <th>id_cod_report</th>
-                        <th>id_committee</th>
-                        <th>id_session</th>
-                        <th>title</th>
-
+                        <th>Codreport</th>
+                        <th>Committee</th>
+                        <th>Session</th>
+                        <th>Title</th>
                         <th>View</th>
-                        <th>Update Comment</th>
+                        <th>Update</th>
                         <!--
                         <th>Session</th>
                         <th>COD ID</th>
@@ -151,11 +148,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td><?php echo $report['id_session'] ?></td>
                         <td><?php echo $report['title'] ?></td>
 
-
-
-
-
-
                         <!--<td><%=rs("namesession") %></td>--> <!-- Session -->
                         <!--<td><%=rs("codnr") %></td>--> <!-- COD Number -->
                         <!--<td><%=rs("shorttitle") %></td>--> <!-- Title -->
@@ -169,9 +161,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <td>EP</td>
                         -->
                         <td style="vertical-align:middle" class="center-y">
-                        
                             <!-- Button trigger modal -->
                             <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#myModal<?php echo $i ?>"><span class="glyphicon glyphicon-eye-open"></span> Validated Version</button> <!-- Details -->
+
+                           <!-- Modal -->
+                            <div class="modal fade bs-example-modal-lg" id="myModal<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+
+                                    <div class="modal-content panel panel-info"> <!-- default primary -->
+
+                                        <div class="modal-header panel-heading"> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <!-- Is it necessary to find out type of doc? -->
+                                            <h3 class="modal-title" id="myModalLabel"><strong>Resolution - Type of Document - <?php echo $report['id_cod_report'] ?></strong></h3>
+                                            
+                                            <h3 class="modal-title"><?php echo $report['title'] ?></h3>
+                                            <!-- Do I need also a short title? -->
+                                            
+                                            <h4 class="modal-title">File coordinator: <strong>Vidal Moreno, Marc</strong>
+                                            <a style="margin-left: 10px" href="#" class="btn btn-default btn-xs" role="button"><span class="glyphicon glyphicon-eye-open"></span> See Profile</a></h4>
+                                            
+                                            <h4 class="modal-title">Committee: <strong><?php echo $report['id_committee'] ?></strong></h4>
+
+                                            <h4 class="modal-title">Rapporteur: <strong>Rapporteur</strong></h4>
+
+                                            <h4 class="modal-title">Stage reached: <strong>Stage reached</strong></h4>
+
+                                            <h4 class="modal-title">Latest Validation: <strong>08/08/2017</strong></h4>
+                                            
+                                            <!--
+                                            <div class="modal-header panel-heading"> 
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            -->
+                                        </div>
+                          
+                                        <div class="modal-body panel-body">
+
+                                            <p><strong>Content:</strong>"commentcontentDLA"</p>
+                                            <p><strong>Procedure in committee:</strong>"commentProcCom"</p>
+                                            <p><strong>Plenary envisaged:</strong>"CommentIDSession"</p>
+                                            <p><strong>Negotiations:</strong>"CommentNegociations"</p>
+                                            <p><strong>Procedural issues: (if any)</strong>"CommentProcIssues"</p>
+                                            <p><strong>Finalisation:</strong>"CommentFinal"</p>
+                                        </div>
+                          
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
               
                         <td style="vertical-align:middle">
