@@ -54,6 +54,9 @@ $(document).ready(function() {
     // Styling and customizing the datatables elements
     $(".dataTables_filter input").attr("placeholder", "Enter text to filter").addClass("form-control placeholder");
 
+    // Adding label to AJAX filter search for datatables
+    $("<span class='filter_label'>Filter COD Files:</span>").prependTo("#table_demo_filter");
+
     // Select picker
     // https://silviomoreto.github.io/bootstrap-select/
     $(".dataTables_length select").addClass("selectpicker").attr("data-width", "70px"); 
