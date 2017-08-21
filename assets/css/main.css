@@ -319,6 +319,16 @@ hr.custom {
 
 /***********************    Datatables Custom    *************************/
 
+table.dataTable thead .sorting_asc {
+    background: #E8E8E8 url(../images/sort_asc.png) no-repeat center right !important;
+    /* background: #E7E7E7 url(../images/sort_asc.png) no-repeat center right; */
+    /* background: #EAEAEA url(../images/sort_asc.png) no-repeat center right; */
+}
+
+table.dataTable thead .sorting_desc {
+    background: #E8E8E8 url(../images/sort_desc.png) no-repeat center right !important;
+}
+
 .dataTables_length label {
     font-weight: normal;
 }
