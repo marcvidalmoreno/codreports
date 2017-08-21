@@ -1,9 +1,11 @@
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     /* Margin bottom by footer height */
     margin-bottom: 70px;
@@ -13,7 +15,7 @@ body {
     width: 90%;
 }
 
-.center-y{
+.center-y {
     vertical-align:middle;
 }
 
@@ -30,7 +32,9 @@ body {
     background-color: #f5f5f5;
 }
 
-.modal-lg {
+/***********************    Bootstrap Modals Custom    *************************/
+
+.modal-lg  {
     width: 70%;
 }
 
@@ -46,26 +50,25 @@ body {
     border-radius: 6px 6px 0px 0px;
 }
 
-.modal-header.active{
+.modal-header.active {
     background-color: #f5f5f5;
 }
 
-.modal-header.success{
+.modal-header.success {
     background-color: #dff0d8;
 }
   
-.modal-header.warning{
+.modal-header.warning {
     background-color: #fcf8e3;
 }
 
-.modal-header.danger{
+.modal-header.danger {
     background-color: #f2dede;
 }
 
-.modal-header.info{
+.modal-header.info {
     background-color: #d9edf7;
 }
-
 
 
 /* Custom page CSS
@@ -88,15 +91,93 @@ code {
     font-size: 80%;
 }
 
+/***********************    Icons Custom    *************************/
+
+.help {
+    font-size: 17px;
+    margin-left: 0px;
+}
+
+/*.help + .glyphicon {*/
+.help.glyphicon {
+    top: -3px;
+}
+
+/***********************    Popover Custom    *************************/
+
+.popover {
+    max-width: 552px !important;
+}
+
+.popover-title {
+    background-color: rgb(217, 237, 247);
+    border-color: rgb(188, 232, 241);
+    color: rgb(49, 112, 143);
+}
+
+/***********************    Miscelanea Custom    *************************/
+
+h4.custom {
+    margin-left: 20px; 
+    margin-bottom: -20px;
+}
+
+h4.custom + div.panel-default{
+    margin: 20px
+}
+
+.nomargin {
+    margin: 0px;
+}
+
+.red {
+    color: red !important;
+    background-color: yellow !important;
+}
+
+hr.custom {
+    height: 3px;
+    color: #d1cdc6;
+    background: #d1cdc6;
+    color: #8b8884;
+    background: #8b8884;    
+    font-size: 0;
+    border: 0;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
 .cke_bottom {
     height: 1px !important;
     padding-bottom: 0px !important;
     /* display: none !important; */
 }
 
-/* Panel */
+/***********************    Bootstrap Panels Custom    *************************/
+
+.panel-custom {
+    background-color: rgb(236, 235, 232); /* #D4D0C8 #E9E4DC */
+}
+
+.panel-custom2 {
+    border-color: rgb(156, 133, 98) !important;
+}
+
+.panel-heading-custom {
+    background-color:#9C8562;
+}
+
 .panel-heading {
     padding: 5px 10px;
+}
+
+.panel-heading-custom {
+    background-color: rgb(196,182,160);
+    background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%);
+    background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%) !important;
+    background-image: linear-gradient(to bottom, rgb(185,170,145) 0%, rgb(196,182,160) 100%) !important;
+    background-image: linear-gradient(to bottom, rgb(196,182,160) 0%, rgb(225,218,207) 100%) !important;
+    background-repeat: repeat-x;
 }
 
 .panel-body {
@@ -109,29 +190,10 @@ code {
     border-bottom: 1px solid #A1A1A1;
 }
 
-.help {
-    font-size: 17px;
-    margin-left: 0px;
-}
-
-/*.help + .glyphicon {*/
-.help.glyphicon {
-    top: -3px;
-}
-
-.popover {
-    max-width: 552px !important;
-}
-
-.popover-title {
-    background-color: rgb(217, 237, 247);
-    border-color: rgb(188, 232, 241);
-    color: rgb(49, 112, 143);
-}
-
-.red {
-    color: red !important;
-    background-color: yellow !important;
+.panel-body-custom {
+    padding-bottom:15px; 
+    background-color: rgb(233, 228, 220);
+    /*rgba(255, 255, 255, 0.55) rgb(247, 250, 253) rgb(254, 253, 249) #fbfbfb #F6F6F6 #E9E9E9*/
 }
 
 .panel-body {
@@ -143,96 +205,45 @@ code {
     padding: 10px;
 }
 
-h4.custom {
-    margin-left: 20px; 
-    margin-bottom: -20px;
-}
-
-h4.custom + div.panel-default{
-    margin: 20px
-}
-
-.panel-custom {
-    background-color: rgb(236, 235, 232); /* #D4D0C8 #E9E4DC */
-}
-
-.panel-custom2 {
-    border-color: rgb(156, 133, 98) !important;
-}
-
-
-.panel-heading-custom {
-    background-color:#9C8562;
-}
-
-.panel-heading-custom {
-    background-color: rgb(196,182,160);
-    background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%);
-    background-image: linear-gradient(to bottom, rgb(156, 133, 98) 0%, rgb(185,170,145) 100%) !important;
-    background-image: linear-gradient(to bottom, rgb(185,170,145) 0%, rgb(196,182,160) 100%) !important;
-    background-image: linear-gradient(to bottom, rgb(196,182,160) 0%, rgb(225,218,207) 100%) !important;
-    background-repeat: repeat-x;
-}
-
 .paneldiffoutput {
     color:black !important; 
     padding: 10px;
 }
 
-.panel-body-custom {
-    padding-bottom:15px; 
-    background-color: rgb(233, 228, 220);
-    /*rgba(255, 255, 255, 0.55) rgb(247, 250, 253) rgb(254, 253, 249) #fbfbfb #F6F6F6 #E9E9E9*/
-}
 
-.nomargin {
-    margin: 0px;
+/***********************    Bootstrap Buttons Custom    *************************/
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
 }
 
 .btn-custom {
     cursor: default;
 }
 
-hr.custom {
-    height: 3px;
-    color: #d1cdc6;
-    background: #d1cdc6;
-    color: #8b8884;
-    background: #8b8884;    
-    
-    font-size: 0;
-    border: 0;
-    margin-left: -12px;
-    margin-right: -12px;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #428bca;
-  border-color: #357ebd;
-}
-
 .btn-custom-hover2 {
-  background-color: rgb(177, 171, 156);
+    background-color: rgb(177, 171, 156);
 }
 
-.btn-custom-hover:hover
-{
-  color: #000;
-  /*background-color: #3276b1;
-  border-color: #285e8e;*/
-  
-  background-color: rgb(177, 171, 156);
-  border-color: rgb(143, 133, 112);
-  /*border-color: rgb(143, 133, 112);*/
+.btn-custom-hover:hover {
+    color: #000;
+    /*background-color: #3276b1;
+    border-color: #285e8e;*/
+    background-color: rgb(177, 171, 156);
+    border-color: rgb(143, 133, 112);
+    /*border-color: rgb(143, 133, 112);*/
 }
+
 .btn-custom-hover:active,
 .btn-custom-hover.active,
 .open .dropdown-toggle.btn-custom-hover {
-  background-image: none;
+    background-image: none;
 }
 
 
+/***********************    Bootstrap Callout Custom    *************************/
 
 .bs-callout {
     margin: 20px 0px;
@@ -277,7 +288,6 @@ hr.custom {
     margin-bottom: 5px;
 }
 
-
 .bs-callout-danger {
     /*background-color: rgb(252, 248, 242);
     border-color: rgb(240, 173, 78);
@@ -290,7 +300,6 @@ hr.custom {
 .bs-callout-danger h4 {
     /*color: rgb(240, 173, 78);*/
 }
-
 
 .bs-callout-danger {
     background-color: #FCF2F2;
@@ -306,6 +315,9 @@ hr.custom {
 .highlight {
     background-color: yellow;
 }
+
+
+/***********************    Datatables Custom    *************************/
 
 .dataTables_length label {
     font-weight: normal;
@@ -338,127 +350,139 @@ hr.custom {
     border-top: 1px solid black;
 }
 
-/*#div {
-    color: red\9;
-    height: 300px\9;
-}*/
+
+/***********************    Navigation Custom    *************************/
 
 .navbar-custom {
-  background-color: #5d7785;
-  border-color: #4f6671;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#76919f), to(#5d7785));
-  background-image: -webkit-linear-gradient(top, #76919f, 0%, #5d7785, 100%);
-  background-image: -moz-linear-gradient(top, #76919f 0%, #5d7785 100%);
-  background-image: linear-gradient(to bottom, #76919f 0%, #5d7785 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff76919f', endColorstr='#ff5d7785', GradientType=0);
+    background-color: #5d7785;
+    border-color: #4f6671;
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#76919f), to(#5d7785));
+    background-image: -webkit-linear-gradient(top, #76919f, 0%, #5d7785, 100%);
+    background-image: -moz-linear-gradient(top, #76919f 0%, #5d7785 100%);
+    background-image: linear-gradient(to bottom, #76919f 0%, #5d7785 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff76919f', endColorstr='#ff5d7785', GradientType=0);
 }
 .navbar-custom .navbar-brand {
-  color: #dedede;
+    color: #dedede;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus {
-  color: #c5c5c5;
-  background-color: transparent;
+    color: #c5c5c5;
+    background-color: transparent;
 }
 .navbar-custom .navbar-text {
-  color: #dedede;
+    color: #dedede;
 }
 .navbar-custom .navbar-nav > li:last-child > a {
-  border-right: 1px solid #4f6671;
+    border-right: 1px solid #4f6671;
 }
 .navbar-custom .navbar-nav > li > a {
-  color: #dedede;
-  border-left: 1px solid #4f6671;
+    color: #dedede;
+    border-left: 1px solid #4f6671;
 }
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
+    color: #ffffff;
+    background-color: transparent;
 }
 .navbar-custom .navbar-nav > .active > a,
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #4f6671;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#4f6671), to(#648090));
-  background-image: -webkit-linear-gradient(top, #4f6671, 0%, #648090, 100%);
-  background-image: -moz-linear-gradient(top, #4f6671 0%, #648090 100%);
-  background-image: linear-gradient(to bottom, #4f6671 0%, #648090 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4f6671', endColorstr='#ff648090', GradientType=0);
+    color: #ffffff;
+    background-color: #4f6671;
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#4f6671), to(#648090));
+    background-image: -webkit-linear-gradient(top, #4f6671, 0%, #648090, 100%);
+    background-image: -moz-linear-gradient(top, #4f6671 0%, #648090 100%);
+    background-image: linear-gradient(to bottom, #4f6671 0%, #648090 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4f6671', endColorstr='#ff648090', GradientType=0);
 }
 .navbar-custom .navbar-nav > .disabled > a,
 .navbar-custom .navbar-nav > .disabled > a:hover,
 .navbar-custom .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
-  background-color: transparent;
+    color: #cccccc;
+    background-color: transparent;
 }
 .navbar-custom .navbar-toggle {
-  border-color: #dddddd;
+    border-color: #dddddd;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #dddddd;
+    background-color: #dddddd;
 }
 .navbar-custom .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+    background-color: #cccccc;
 }
 .navbar-custom .navbar-collapse,
 .navbar-custom .navbar-form {
-  border-color: #4e6470;
+    border-color: #4e6470;
 }
 .navbar-custom .navbar-nav > .dropdown > a:hover .caret,
 .navbar-custom .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
 }
 .navbar-custom .navbar-nav > .open > a,
 .navbar-custom .navbar-nav > .open > a:hover,
 .navbar-custom .navbar-nav > .open > a:focus {
-  background-color: #4f6671;
-  color: #ffffff;
+    background-color: #4f6671;
+    color: #ffffff;
 }
 .navbar-custom .navbar-nav > .open > a .caret,
 .navbar-custom .navbar-nav > .open > a:hover .caret,
 .navbar-custom .navbar-nav > .open > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
 }
 .navbar-custom .navbar-nav > .dropdown > a .caret {
-  border-top-color: #dedede;
-  border-bottom-color: #dedede;
+    border-top-color: #dedede;
+    border-bottom-color: #dedede;
 }
 @media (max-width: 767) {
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
-    color: #dedede;
+        color: #dedede;
   }
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-    background-color: transparent;
+        color: #ffffff;
+        background-color: transparent;
   }
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #4f6671;
+        color: #ffffff;
+        background-color: #4f6671;
   }
   .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
-    background-color: transparent;
+        color: #cccccc;
+        background-color: transparent;
   }
 }
 .navbar-custom .navbar-link {
-  color: #dedede;
+    color: #dedede;
 }
 .navbar-custom .navbar-link:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
-/*Super administration*/
+/****************************************************************************/
+/***********************    SUPER ADMINISTRATION    *************************/
+/****************************************************************************/
+
+.main-container {
+    padding-bottom: 30px;
+}
+
+.main-container2 {
+    padding-bottom: 30px;
+}
+
+.containercustom {
+    width: 95%;
+}
 
 .customcol {
     padding-top: 3px;
@@ -477,19 +501,6 @@ hr.custom {
     padding-bottom: 0px;
 }
 
-.containercustom {
-    width: 95%;
-}
-
 tr.customselected {
     color: green !important;
 }
-
-.main-container {
-    padding-bottom: 30px;
-}
-
-.main-container2 {
-    padding-bottom: 30px;
-}
-
